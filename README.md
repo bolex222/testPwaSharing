@@ -26,16 +26,17 @@ navigator.share({
 
 ## Some constraints:
 
-#### HTTPS
+### HTTPS
 For some security reasons, browsers do not allow this function if the website isn't secured by SSL (HTTPS)
 
 
-#### browser compatibility
+### browser compatibility
 There is the browser compatibility from MDN documentation:
 
-![](images/Untitled.png)
+![](images/brwsrComp.png)
 
 It doesn't work for chrome on MAC
+
 firefox mobile can't share file or text
 
 When sharing isn't possible on the browser the method ```navigator.share()``` do not exist.
@@ -46,8 +47,8 @@ if(navigator.share) {
 } else {
   // sharing is  ot possible
 }
-
-
 ```
+
+
 
 
