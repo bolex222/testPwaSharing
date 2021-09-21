@@ -11,14 +11,16 @@ class SharingButton extends React.Component {
 
   async _clickShareHandle() {
     if(navigator.share) {
-      await navigator.share({
-        title: this.props.title,
-        text: this.props.text,
-        url: this.props.url
-      }).catch(() => {
-        alert("Ho nooo, it failed")
-      })
-      alert("Yeaaaaaa!!! shared successfully")
+      try {
+        await navigator.share({
+          title: this.props.title,
+          text: this.props.text,
+          url: this.props.url
+        })
+        alert('successfully shared')
+      } catch {
+        alert('user aborted')
+      }
     } else {
       alert("navigator can't share")
     }
