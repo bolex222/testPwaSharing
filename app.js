@@ -9,10 +9,6 @@ class SharingImageButton extends React.Component {
   }
 
   async _clickShareHandle () {
-    alert(navigator.canShare ? 'yes1' : 'no1')
-    alert(navigator.canShare({ files: this.props.fileArray }) ? 'yes2' : 'no2')
-
-
     if (navigator.canShare && navigator.canShare({ files: this.props.fileArray })) {
       try {
         await navigator.share({
