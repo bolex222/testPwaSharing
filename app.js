@@ -52,7 +52,7 @@ class Main extends React.Component {
         />
         hello this is a test for sharing with pwa
         and a cat
-        <img src="/images/cat.webp" alt="this is a cat cute af"/>
+        <img src="images/cat.webp" alt="this is a cat cute af"/>
       </main>
     )
   }
