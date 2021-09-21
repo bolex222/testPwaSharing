@@ -18,7 +18,7 @@ class SharingButton extends React.Component {
           url: this.props.url
         })
         alert('successfully shared')
-      } catch {
+      } catch (e){
         alert('user aborted')
       }
     } else {
