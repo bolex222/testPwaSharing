@@ -2,9 +2,6 @@ class SharingImageButton extends React.Component {
   constructor (props) {
     super(props)
     this._bind()
-    this.state = {
-      fileArray: this.props.fileArray
-    }
   }
 
   _bind () {
@@ -12,12 +9,16 @@ class SharingImageButton extends React.Component {
   }
 
   async _clickShareHandle () {
-    if (navigator.canShare && navigator.canShare({ files: this.state.fileArray })) {
+    alert(navigator.canShare ? 'yes1' : 'no1')
+    alert(navigator.canShare({ files: this.props.fileArray }) ? 'yes2' : 'no2')
+
+
+    if (navigator.canShare && navigator.canShare({ files: this.props.fileArray })) {
       try {
         await navigator.share({
           title: this.props.title,
           text: this.props.text,
-          files: this.state.fileArray
+          files: this.props.fileArray
         })
         alert('successfully shared')
       } catch (e) {
